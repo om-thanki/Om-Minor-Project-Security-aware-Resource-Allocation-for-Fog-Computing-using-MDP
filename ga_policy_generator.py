@@ -1,7 +1,3 @@
-# ga_policy_generator_complex_FIXED_MDP_MATCH.py
-# GA EXACTLY MATCHES MDP: Same input, same reward, same metrics
-# Input: scenario.json | Output: policy_ga_complex.json
-
 import json
 import numpy as np
 import time
@@ -10,7 +6,7 @@ import psutil
 from deap import base, creator, tools, algorithms
 import random
 
-# -------- Load Input Data (SAME AS MDP) --------
+# -------- Load Input Data --------
 with open('scenario.json', 'r') as f:  # ✅ FIXED: SAME AS MDP
     data = json.load(f)
 
@@ -261,3 +257,4 @@ print(f"   Compliance: {security_compliance_rate*100:.1f}% | Breaches: {breach_c
 print(f"   Mean Reward: {mean_policy_reward:.2f} | Total: {total_reward:.1f}")
 print(f"✅ SAVED: ga_policy.json")
 print("="*90)
+
