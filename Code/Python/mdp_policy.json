@@ -1,0 +1,179 @@
+{
+  "metadata": {
+    "solver": "mdptoolbox.ValueIteration",
+    "problem_complexity": "25_modules_11_devices",
+    "convergence_iterations": 203,
+    "time_to_converge_sec": 0.017806,
+    "policy_size_kb": 1.2275,
+    "memory_overhead_mb": 48.6758,
+    "mdp_parameters": {
+      "discount_factor": 0.9,
+      "convergence_threshold": 1e-06,
+      "reward_compliance": 100,
+      "overhead_per_security_level": 2,
+      "breach_penalty_factor": 20,
+      "resource_shortfall_penalty": 200,
+      "base_residual_breach_prob": 0.008,
+      "gap_breach_multiplier": 0.4,
+      "breach_impact_factor": 200
+    },
+    "approach": "Security-aware MDP with Balanced Distribution & Optimized Penalties"
+  },
+  "metrics": {
+    "security_compliance_rate": 0.68,
+    "breach_count": 8,
+    "mean_policy_reward": 44.2586,
+    "weighted_breach_cost": 543.54,
+    "critical_breach_count": 8,
+    "non_critical_breach_count": 0,
+    "total_modules": 25,
+    "total_devices": 11
+  },
+  "policy": {
+    "VideoAnalytics_HQ": "CityControlFog_Central",
+    "VideoAnalytics_Traffic": "DistrictFog_Commercial",
+    "VideoAnalytics_Surveillance": "DistrictFog_Industrial",
+    "VideoAnalytics_PublicSafety": "cloud_primary",
+    "TrafficController_Central": "EdgeGateway_Downtown1",
+    "TrafficController_North": "cloud_primary",
+    "TrafficController_South": "DistrictFog_Residential",
+    "TrafficController_Emergency": "EdgeGateway_Downtown2",
+    "CarAnalytics_Zone1": "CityControlFog_Central",
+    "CarAnalytics_Zone2": "CityControlFog_Central",
+    "CarAnalytics_Zone3": "CityControlFog_Central",
+    "CarAnalytics_Highway": "CityControlFog_Central",
+    "PollutionMonitor_Downtown": "CityControlFog_Central",
+    "PollutionMonitor_Industrial": "CityControlFog_Central",
+    "PollutionMonitor_Airport": "CityControlFog_Central",
+    "PollutionMonitor_Residential": "cloud_primary",
+    "StorageModule_Primary": "cloud_primary",
+    "StorageModule_Backup": "cloud_primary",
+    "StorageModule_Archive": "cloud_primary",
+    "SecurityMonitor_Central": "CityControlFog_North",
+    "SecurityMonitor_Perimeter": "CityControlFog_North",
+    "EmergencyResponse_Medical": "DistrictFog_Residential",
+    "EmergencyResponse_Fire": "cloud_primary",
+    "DataAggregator_Central": "cloud_primary",
+    "DataAggregator_Regional": "CityControlFog_Central"
+  },
+  "resource_utilization": {
+    "cloud_primary": {
+      "ram_used": 8832,
+      "mips_used": 15700,
+      "modules": [
+        "VideoAnalytics_PublicSafety",
+        "TrafficController_North",
+        "PollutionMonitor_Residential",
+        "StorageModule_Primary",
+        "StorageModule_Backup",
+        "StorageModule_Archive",
+        "EmergencyResponse_Fire",
+        "DataAggregator_Central"
+      ]
+    },
+    "CityControlFog_Central": {
+      "ram_used": 6144,
+      "mips_used": 15100,
+      "modules": [
+        "VideoAnalytics_HQ",
+        "CarAnalytics_Zone1",
+        "CarAnalytics_Zone2",
+        "CarAnalytics_Zone3",
+        "CarAnalytics_Highway",
+        "PollutionMonitor_Downtown",
+        "PollutionMonitor_Industrial",
+        "PollutionMonitor_Airport",
+        "DataAggregator_Regional"
+      ]
+    },
+    "CityControlFog_North": {
+      "ram_used": 1536,
+      "mips_used": 4600,
+      "modules": [
+        "SecurityMonitor_Central",
+        "SecurityMonitor_Perimeter"
+      ]
+    },
+    "DistrictFog_Commercial": {
+      "ram_used": 1024,
+      "mips_used": 3500,
+      "modules": [
+        "VideoAnalytics_Traffic"
+      ]
+    },
+    "DistrictFog_Residential": {
+      "ram_used": 2048,
+      "mips_used": 5200,
+      "modules": [
+        "TrafficController_South",
+        "EmergencyResponse_Medical"
+      ]
+    },
+    "DistrictFog_Industrial": {
+      "ram_used": 1024,
+      "mips_used": 3000,
+      "modules": [
+        "VideoAnalytics_Surveillance"
+      ]
+    },
+    "EdgeGateway_Downtown1": {
+      "ram_used": 1024,
+      "mips_used": 3000,
+      "modules": [
+        "TrafficController_Central"
+      ]
+    },
+    "EdgeGateway_Downtown2": {
+      "ram_used": 768,
+      "mips_used": 2500,
+      "modules": [
+        "TrafficController_Emergency"
+      ]
+    },
+    "EdgeGateway_Suburb1": {
+      "ram_used": 0,
+      "mips_used": 0,
+      "modules": []
+    },
+    "EdgeGateway_Suburb2": {
+      "ram_used": 0,
+      "mips_used": 0,
+      "modules": []
+    },
+    "EdgeGateway_Industrial1": {
+      "ram_used": 0,
+      "mips_used": 0,
+      "modules": []
+    }
+  },
+  "verification": {
+    "individual_rewards": {
+      "VideoAnalytics_HQ": -42.0,
+      "VideoAnalytics_Traffic": -84.0,
+      "VideoAnalytics_Surveillance": -84.0,
+      "VideoAnalytics_PublicSafety": 99.86666666666666,
+      "TrafficController_Central": -101.0,
+      "TrafficController_North": 99.89333333333333,
+      "TrafficController_South": -36.0,
+      "TrafficController_Emergency": -101.0,
+      "CarAnalytics_Zone1": 97.904,
+      "CarAnalytics_Zone2": 97.904,
+      "CarAnalytics_Zone3": 97.904,
+      "CarAnalytics_Highway": 97.872,
+      "PollutionMonitor_Downtown": 97.936,
+      "PollutionMonitor_Industrial": 97.904,
+      "PollutionMonitor_Airport": 97.904,
+      "PollutionMonitor_Residential": 99.97333333333333,
+      "StorageModule_Primary": 99.92,
+      "StorageModule_Backup": 99.94666666666667,
+      "StorageModule_Archive": 99.97333333333333,
+      "SecurityMonitor_Central": -42.0,
+      "SecurityMonitor_Perimeter": 97.872,
+      "EmergencyResponse_Medical": -84.0,
+      "EmergencyResponse_Fire": 99.89333333333333,
+      "DataAggregator_Central": 99.89333333333333,
+      "DataAggregator_Regional": 97.904
+    },
+    "total_reward": 1106.464
+  }
+}
